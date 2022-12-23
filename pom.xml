@@ -3,4 +3,13 @@
   <groupId>com.vilcart.app</groupId>
   <artifactId>com.vilcart.app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+	  
+	  
+	  
+  </dependencies>
+  
+  
+  
 </project>
