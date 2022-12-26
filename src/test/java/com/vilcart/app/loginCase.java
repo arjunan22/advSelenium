@@ -22,7 +22,7 @@ public class loginCase {
 		p.load(fis);
 		
 		driver.get(p.getProperty("url"));
-		driver.findElement(By.xpath("(//input[@class='text-input text-input-md'])[1]")) .sendKeys(p.getProperty("email"));
+		driver.findElement(By.xpath("(//input[@class='text-input text-input-md'])[1]")).sendKeys(p.getProperty("user"));
 		driver.findElement(By.xpath("(//input[@class='text-input text-input-md'])[2]")).sendKeys(p.getProperty("password"));
 		driver.findElement(By.xpath("(//span[@class='button-inner'])[5]")).click();
 			
