@@ -7,12 +7,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class loginCase {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		WebDriver driver= new ChromeDriver();
+		//WebDriver driver= new ChromeDriver();
+		WebDriver driver= new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
@@ -22,10 +24,10 @@ public class loginCase {
 		p.load(fis);
 		
 		driver.get(p.getProperty("url"));
-		driver.findElement(By.xpath("(//input[@class='text-input text-input-md'])[1]")).sendKeys(p.getProperty("user"));
-		driver.findElement(By.xpath("(//input[@class='text-input text-input-md'])[2]")).sendKeys(p.getProperty("password"));
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(p.getProperty("user"));
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(p.getProperty("password"));
 		driver.findElement(By.xpath("(//span[@class='button-inner'])[5]")).click();
-			
+		
 						
 		Thread.sleep(10000);
 		driver.close();
