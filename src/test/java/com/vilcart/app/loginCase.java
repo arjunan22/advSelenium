@@ -14,6 +14,7 @@ public class loginCase {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		//WebDriver driver= new ChromeDriver();
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\Downloads\\msedgedriver.exe" );
 		WebDriver driver= new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
