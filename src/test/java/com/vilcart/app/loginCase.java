@@ -16,12 +16,12 @@ public class loginCase {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		//WebDriver driver= new ChromeDriver();
 		
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\Downloads\\msedgedriver.exe" );
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver.exe" );
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		FileInputStream fis = new FileInputStream(".//data.properties");
+		FileInputStream fis = new FileInputStream("./src/test/resources/data.properties");
 		Properties p =new Properties();
 		p.load(fis);
 		
